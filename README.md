@@ -1,4 +1,6 @@
-# 腾讯视频-互动视频-官方示例组件
+# 腾讯视频互动创作平台-官方示例组件
+
+![](https://puui.qpic.cn/vupload/0/1577774036603_3ca6gr4neb6.png/0)
 
 * [组件开发](https://xt.qq.com/ivp/comps)
 * [开发文档](https://docs.qq.com/doc/DQ0xsYXRXQ3BNcm1E)
