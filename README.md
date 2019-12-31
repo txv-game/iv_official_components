@@ -2,7 +2,7 @@
   <img width="50%" src="https://puui.qpic.cn/vupload/0/1577775605161_d58ly0v8376.png/0">
 </div>
 
-# 腾讯视频互动创作平台-官方示例组件
+# 官方示例组件
 * [组件开发](https://xt.qq.com/ivp/comps)
 * [开发文档](https://docs.qq.com/doc/DQ0xsYXRXQ3BNcm1E)
 
