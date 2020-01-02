@@ -10,7 +10,7 @@
     <div class="track-bg" :style="{
             transform: `rotate(${deg}deg)`
         }">
-        <img ref="trackBg" :src="bg" v-show="visible" :style="{
+        <img ref="trackBg" :src="bg.url" v-show="visible" :style="{
             width: 100 * ratio + '%'
         }">
     </div>
@@ -22,7 +22,7 @@
                 dragmove: onDragMove,
                 dragend: onDragEnd
             }">
-            <img ref="blockBg" class="block-bg" :src="blockBg" :style="{
+            <img ref="blockBg" class="block-bg" :src="blockBg.url" :style="{
                 transform: `rotate(${deg}deg)`
             }">
         </div>
@@ -35,11 +35,11 @@ export default {
         return {
             left: 0,
             top: 0,
-
             ratio: 1,
         };
     },
     mounted() {
+        console.log('??????', this.bg)
         this.bridge.on('videoTimeUpdate', time => {
             if (!this.loaded && time >= this.startTime && time <= this.endTime) {
                 this.show();
@@ -47,7 +47,7 @@ export default {
             }
         });
         let img = new Image();
-        img.src = this.bg;
+        img.src = this.bg.url;
         img.onload = () => {
             this.ratio = img.width / img.height;
         };
