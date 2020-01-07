@@ -39,7 +39,6 @@ export default {
         };
     },
     mounted() {
-        console.log('??????', this.bg)
         this.bridge.on('videoTimeUpdate', time => {
             if (!this.loaded && time >= this.startTime && time <= this.endTime) {
                 this.show();
@@ -82,7 +81,7 @@ export default {
                 distance = Infinity;
             }
             if (Math.abs(Math.sqrt(left * left + top * top) - distance) < 10) {
-                this.bridge.invoke('action', this.action);
+                this.bridge.action(this.action);
                 this.hide();
                 vBridge.play();
                 this.loaded = true;

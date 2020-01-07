@@ -32,7 +32,7 @@ export default {
 
     methods: {
         onClick(e) {
-            this.bridge.invoke('action', this.action);
+            this.bridge.action(this.action);
             this.selected = true;
             this.hide();
             if (this.playType === 'stop') {
